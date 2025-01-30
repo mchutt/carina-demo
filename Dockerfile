@@ -8,4 +8,4 @@ RUN apk update && \
     ln -s /opt/apache-maven-3.9.9/bin/mvn /usr/bin/mvn
 COPY . .
 ENV SUITE_NAME=helloWord
-ENTRYPOINT ["sh", "-c", "mvn clean test -Dsuite=${SUITE_NAME}"]
+ENTRYPOINT ["sh", "-c", "mvn test -Dsuite=${SUITE_NAME}"]
