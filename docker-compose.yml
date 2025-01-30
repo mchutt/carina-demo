@@ -1,0 +1,7 @@
+services:
+  test-runner:
+    build: .
+    volumes:
+      - ./container-target:/app/target
+    environment:
+      - SUITE_NAME=api
